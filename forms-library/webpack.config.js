@@ -8,7 +8,7 @@ const path = require('path');
       library: 'BmetFormUI',
       libraryTarget: 'umd',
       globalObject: 'this',
-      clean: true
+      clean: true,
     },
     externals: {
       'react': {

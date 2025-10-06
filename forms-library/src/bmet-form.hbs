@@ -1,0 +1,712 @@
+<div class="row px-48 py-30">
+    <div class="md:w-full">
+        <div>
+            <!-- Header -->
+            <table width="100%" cellpadding="7" cellspacing="1">
+            <tr valign="middle">
+                <td valign="middle" style="width: 14%; padding: 0">
+                <img
+                    src="assets/images/logos/bmetLogo.png"
+                    align="LEFT"
+                    width="50"
+                    height="50"
+                    style="filter: grayscale(100%)"
+                />
+                </td>
+                <td valign="middle" style="width: 50%">
+                <center>
+                    <b>
+                    <span style="font-size: large">
+                        Government People's Republic of Bangladesh
+                    </span>
+                    </b>
+                    <br />
+                    <b>Bureau of Manpower, Employment and Training (BMET)</b>
+                </center>
+                </td>
+                <td valign="middle" style="width: 15%">&nbsp;</td>
+            </tr>
+          <tr valign="middle">
+            <td colspan="3" width="698" height="1" 
+                style="border-top: 1.50pt double #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+              <p class="western" align="CENTER">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="2">
+                    <b>Individual Clearance Application Form</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Serial Number Section -->
+        <table width="100%" cellpadding="7" cellspacing="1">
+          <tr valign="middle">
+            <td colspan="3" width="130" height="1" style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    <b>Serial Number:</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <!-- Serial number boxes here -->
+            <td colspan="2" width="73" style="border: none; padding: 0in">
+              <p class="western">
+                <span size="2" style="font-size: 9pt">
+                  Date: {{formatDate currentDate 'DD-MM-YYYY'}}
+                </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- A. Visa Information -->
+        <table width="100%" cellpadding="7" cellspacing="1">
+          <tr valign="middle">
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span color="#000000">
+                  <span face="Calibri-Bold, sans-serif">
+                    <span size="2" style="font-size: 9pt">
+                      <b>A. Visa Information</b>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="2" style="font-size: 11pt">
+                    1. Block visa No.: &nbsp; &nbsp; {{visa.number}}
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="2" style="font-size: 11pt">
+                    2. Visa issue Date: &nbsp; &nbsp; {{formatDate visa.issueDate}}
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr valign="middle">
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    3. Visa issuing country: &nbsp; &nbsp; {{visa.country}}
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    4. Total visa count: &nbsp; &nbsp; {{visa.totalCount}}
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr valign="middle">
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    5. RL no.:
+                  </span>
+                </span>
+                &nbsp; &nbsp;
+                <span style="font-size: 12pt">
+                  <b>{{agency.rlNumber}}</b>
+                </span>
+              </p>
+            </td>
+            <td style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    6. RA name:
+                  </span>
+                </span>
+                &nbsp; &nbsp;
+                <span style="font-size: 12pt">
+                  <b>{{agency.name}}</b>
+                </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- B. Employer Information -->
+        <table width="100%" cellpadding="7" cellspacing="1">
+          <tr valign="middle">
+            <td colspan="2" style="border: none; padding: 0in">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    <b>B. Employer /Company/ foreign recruiting agent Information</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr valign="middle">
+            <td colspan="2" style="border: none; padding: 0in">
+              <p class="western">
+                <span color="#000000">
+                  <span face="Calibri, sans-serif">
+                    <span size="2" style="font-size: 9pt">
+                      7. Employer is a company or recruiting agent (foreign):
+                    </span>
+                  </span>
+                </span>
+                <span color="#000000">
+                  <span face="Calibri-Bold, sans-serif">
+                    <span size="2" style="font-size: 9pt">
+                      Yes/NO &nbsp; &nbsp; {{agency.sponsorName}}
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- C. Job Information -->
+        <div style="text-align: left">
+          <span face="Calibri-Bold, sans-serif">
+            <span size="2" style="font-size: 9pt">
+              <b>C. Job information</b>
+            </span>
+          </span>
+        </div>
+
+        <table class="borderedTable" border="1" cellspacing="0" style="border-color: beige" cellpadding="0">
+          <tr>
+            <td width="130" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    <b>Item</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <b>Job/post category # 1</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <b>Job/post category # 2</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="162" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <b>Job/post category # 3</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="130" height="1" valign="middle">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Name of Job/post
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="2" style="font-size: 9pt">
+                  &nbsp; &nbsp; {{job.profession}}
+                </span>
+              </p>
+            </td>
+            <td width="175" valign="middle"><p class="western"><br /></p></td>
+            <td width="162" valign="middle"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 7pt">
+                    Monthly wages/salary
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="2" style="font-size: 9pt">
+                  &nbsp; &nbsp; {{job.salary}}
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Food (Put √)
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    &nbsp;{{#if job.benefits.food}}YES{{else}}NO{{/if}}
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Housing (Put √)
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    &nbsp;{{#if job.benefits.housing}}YES{{else}}NO{{/if}}
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Medical (Put √)
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    &nbsp;{{#if job.benefits.medical}}YES{{else}}NO{{/if}}
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Contact duration (yr)
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="2" style="font-size: 9pt">
+                  &nbsp;{{job.contractDuration}}
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+        </table>
+
+        <!-- D. Employee Information -->
+        <div style="text-align: left; margin-bottom: 5px">
+          <span face="Calibri-Bold, sans-serif">
+            <span size="2" style="font-size: 9pt">
+              <b>D. Employee Information</b>
+            </span>
+          </span>
+        </div>
+
+        <table class="borderedTable" border="1" style="border-color: beige" cellspacing="0" cellpadding="0">
+          <tr valign="middle">
+            <td width="130" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="2" style="font-size: 9pt">
+                    <b>Item</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <b>Item Employee # 1</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175" align="center">
+              <p class="western">
+                <span face="Calibri-Bold, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <b>Item Employee # 2</b>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="162"><p class="western"><span face="Calibri-Bold, sans-serif"><span size="1" style="font-size: 8pt"><b 
+  /></span></span></p></td>
+          </tr>
+
+          <tr>
+            <td width="130" height="1" valign="middle">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Registration ID
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="2" style="font-size: 9pt">
+                  &nbsp; &nbsp; {{employee.registrationId}}
+                </span>
+              </p>
+            </td>
+            <td width="175" valign="middle"><p class="western"><br /></p></td>
+            <td width="162" valign="middle"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 7pt">
+                    Visa number
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="2" style="font-size: 9pt">
+                  <p style="font-size: 11pt">
+                    &nbsp;{{visa.number}}
+                  </p>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Visa issue date
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <p style="font-size: 11pt">
+                      &nbsp;{{formatDate employee.stampingDate}}
+                    </p>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Visa expiry date
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    <p style="font-size: 11pt">
+                      &nbsp;{{formatDate visa.expiryDate}}
+                    </p>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Passport number
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <p style="font-size: 11pt">
+                  &nbsp;{{employee.passportNo}}
+                </p>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Passport issue date
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="1" style="font-size: 8pt">
+                  <p style="font-size: 11pt">
+                    &nbsp;{{formatDate employee.passportIssueDate}}
+                  </p>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Passport expiry date
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="1" style="font-size: 8pt">
+                  <p style="font-size: 11pt">
+                    &nbsp;{{formatDate employee.passportExpiryDate}}
+                  </p>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Birth date in passport
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="1" style="font-size: 8pt">
+                  <p style="font-size: 11pt">
+                    &nbsp;{{formatDate employee.dateOfBirth}}
+                  </p>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Passport issue place
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="1" style="font-size: 9pt">
+                  <p style="font-size: 11pt">
+                    &nbsp;{{employee.passportIssuePlace}}
+                  </p>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Type of visa
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 10pt">
+                    &nbsp;{{employee.visaType}}
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Passport type
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td width="186">
+              <p class="western">
+                <span size="2" style="font-size: 10pt">
+                  &nbsp;{{employee.passportType}}
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+
+          <tr valign="middle">
+            <td width="130" height="1">
+              <p class="western">
+                <span face="Calibri, sans-serif">
+                  <span size="1" style="font-size: 8pt">
+                    Purpose of visit
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td valign="middle" width="186">
+              <p class="western">
+                <span size="1" style="font-size: 8pt">
+                  &nbsp;{{employee.purposeOfVisit}}
+                </span>
+              </p>
+            </td>
+            <td width="175"><p class="western"><br /></p></td>
+            <td width="162"><p class="western"><br /></p></td>
+          </tr>
+        </table>
+
+        <!-- Signature Section -->
+        <table border="0" cellspacing="0" width="100%" cellpadding="0">
+          <tr valign="middle">
+            <td style="border: none; padding: 0in"><p class="western">&nbsp;</p></td>
+            <td style="border: none; padding: 0in"><p class="western">&nbsp;</p></td>
+          </tr>
+          <tr valign="middle">
+            <td style="border: none; padding: 0in"><p class="western">&nbsp;</p></td>
+            <td style="border: none; padding: 0in"><p class="western">&nbsp;</p></td>
+          </tr>
+          <tr valign="middle">
+            <td align="left">
+              <p class="western">-------------------------------------</p>
+            </td>
+            <td align="right">
+              <p class="western">--------------------------------</p>
+            </td>
+          </tr>
+          <tr valign="middle">
+            <td align="left" style="font-size: 9pt">
+              &nbsp; &nbsp; &nbsp; &nbsp;Signature of the recipient Officer
+            </td>
+            <td align="right" style="font-size: 9pt">
+              Applicant's Signature &nbsp; &nbsp; &nbsp; &nbsp;
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</div>
